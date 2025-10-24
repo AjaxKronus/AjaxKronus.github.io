@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Maps</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#history">History</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#future">Future Trends</a>
+        <a href="#references">References</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- Hero Section with Parallax Effect -->
+    <div class="parallax">
+        <div class="hero-text">
+            <h1>Interactive Web Maps</h1>
+            <p>Revolutionizing Geographic Information</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-section">
+        <div class="container">
+            <p class="intro-text">
+                Interactive web maps have revolutionized how we explore and understand geographic information. 
+                Unlike traditional paper maps, <strong>web maps allow users to zoom, pan, and interact with spatial data</strong> 
+                in real-time through their web browsers. These maps combine <em>cartography, web development, and geographic data</em> 
+                to create powerful visualization tools used in everything from navigation apps to urban planning.
+            </p>
+        </div>
+    </div>
+
+    <!-- History Section with Image Cards -->
+    <div class="content-section gray-bg" id="history">
+        <div class="container">
+            <h2>History and Evolution</h2>
+            <p>
+                Web mapping emerged in the mid-1990s with the advent of the internet, but it truly took off in 2005 when 
+                <strong>Google Maps</strong> launched and introduced the concept of "slippy maps" - interactive maps that 
+                could be dragged and zoomed smoothly. This innovation sparked a revolution in how geographic information 
+                was shared and consumed online.
+            </p>
+            
+            <h3>Today's Applications</h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">🚗</div>
+                    <h4>Ride-Sharing</h4>
+                    <p>Uber, Lyft</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍕</div>
+                    <h4>Food Delivery</h4>
+                    <p>DoorDash, Grubhub</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h4>Real Estate</h4>
+                    <p>Zillow, Redfin</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌤️</div>
+                    <h4>Weather</h4>
+                    <p>Forecasting Tools</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚨</div>
+                    <h4>Emergency</h4>
+                    <p>Response Systems</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies Section with Styled Table -->
+    <div class="content-section" id="technologies">
+        <div class="container">
+            <h2>Key Technologies</h2>
+            <p>
+                Modern web maps rely on several core technologies working together seamlessly. <em>JavaScript libraries</em> 
+                like <strong>Leaflet</strong> and <strong>Mapbox GL JS</strong> provide the interactive functionality, 
+                while tile servers deliver the map imagery in small, manageable pieces. Geographic data is often stored 
+                in formats like <strong>GeoJSON</strong> or vector tiles.
+            </p>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Client-Side</td>
+                        <td>Leaflet, Mapbox GL JS</td>
+                        <td>Interactive map rendering</td>
+                    </tr>
+                    <tr>
+                        <td>Client-Side</td>
+                        <td>HTML5, CSS3, JavaScript</td>
+                        <td>User interface and interactions</td>
+                    </tr>
+                    <tr>
+                        <td>Data Formats</td>
+                        <td>GeoJSON, Vector Tiles</td>
+                        <td>Geographic data storage</td>
+                    </tr>
+                    <tr>
+                        <td>Server-Side</td>
+                        <td>PostGIS</td>
+                        <td>Spatial database management</td>
+                    </tr>
+                    <tr>
+                        <td>Server-Side</td>
+                        <td>GeoServer</td>
+                        <td>Data serving and processing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="tech-subsections">
+                <div class="subsection">
+                    <h3>Client-Side Technologies</h3>
+                    <p>
+                        The front-end of web maps uses HTML5, CSS3, and JavaScript to render interactive experiences. 
+                        Popular mapping libraries handle complex tasks like coordinate transformations, user interactions, 
+                        and layer management, making it easier for developers to create sophisticated applications.
+                    </p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Server-Side Technologies</h3>
+                    <p>
+                        Behind every web map is a robust server infrastructure that stores and serves geographic data. 
+                        Technologies like <strong>PostGIS</strong> (a spatial database), <strong>GeoServer</strong>, 
+                        and cloud platforms enable efficient data management and delivery at scale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Future Trends with Image Hover Effect -->
+    <div class="content-section gray-bg" id="future">
+        <div class="container">
+            <h2>Current Applications and Future Trends</h2>
+            <p>
+                Interactive web maps are increasingly incorporating <strong>real-time data streams</strong>, 
+                3D visualizations, and augmented reality features. Smart cities use web maps to monitor traffic, 
+                track air quality, and manage resources efficiently. The future points toward more 
+                <em>immersive experiences</em> with virtual reality integration and AI-powered spatial analysis 
+                directly in the browser.
+            </p>
+
+            <div class="image-gallery">
+                <div class="img-hover-zoom">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" alt="Data Analytics">
+                    <div class="overlay">
+                        <div class="text">Real-Time Data Streams</div>
+                    </div>
+                </div>
+                <div class="img-hover-zoom">
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600" alt="3D Visualization">
+                    <div class="overlay">
+                        <div class="text">3D Visualizations</div>
+                    </div>
+                </div>
+                <div class="img-hover-zoom">
+                    <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600" alt="Smart Cities">
+                    <div class="overlay">
+                        <div class="text">Smart City Integration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- References Section -->
+    <div class="content-section" id="references">
+        <div class="container">
+            <h2>See Also</h2>
+            <ul class="resource-list">
+                <li><a href="https://leafletjs.com/" target="_blank">Leaflet Documentation</a></li>
+                <li><a href="https://www.mapbox.com/" target="_blank">Mapbox Platform</a></li>
+                <li><a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Project</a></li>
+            </ul>
+
+            <h2>References</h2>
+            <ol class="reference-list">
+                <li>Kraak, M. J., & Brown, A. (2020). Web Cartography: Developments and Prospects. CRC Press.</li>
+                <li>Google Maps Platform Documentation (2024). Google LLC.</li>
+                <li>Leaflet - An Open-Source JavaScript Library for Interactive Maps. Retrieved from https://leafletjs.com</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Interactive Web Maps Wiki. Created for Lab 2.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
