@@ -1,0 +1,390 @@
+/* ===========================
+   GENERAL STYLES
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===========================
+   NAVIGATION BAR (Responsive)
+   =========================== */
+.topnav {
+    background-color: #2c3e50;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #34495e;
+    color: #3498db;
+}
+
+.topnav a.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* ===========================
+   PARALLAX HERO SECTION
+   =========================== */
+.parallax {
+    background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1600');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 24px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+@media screen and (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        min-height: 300px;
+    }
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text p {
+        font-size: 18px;
+    }
+}
+
+/* ===========================
+   CONTENT SECTIONS
+   =========================== */
+.content-section {
+    padding: 60px 20px;
+}
+
+.gray-bg {
+    background-color: #f4f4f4;
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.content-section h3 {
+    color: #34495e;
+    font-size: 26px;
+    margin: 30px 0 15px 0;
+}
+
+.content-section h4 {
+    color: #34495e;
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+}
+
+.content-section p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.intro-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ===========================
+   CARD CONTAINER (W3Schools Style)
+   =========================== */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* ===========================
+   STYLED TABLE (W3Schools Style)
+   =========================== */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table thead tr {
+    background-color: #3498db;
+    color: white;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px 18px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #3498db;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #e8f4f8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .styled-table {
+        font-size: 14px;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 10px 8px;
+    }
+}
+
+/* ===========================
+   SUBSECTIONS
+   =========================== */
+.tech-subsections {
+    margin-top: 40px;
+}
+
+.subsection {
+    background-color: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===========================
+   IMAGE GALLERY WITH HOVER OVERLAY
+   =========================== */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.img-hover-zoom {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.img-hover-zoom img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    background-color: rgba(52, 152, 219, 0.9);
+}
+
+.img-hover-zoom:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+/* ===========================
+   LISTS
+   =========================== */
+.resource-list,
+.reference-list {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.resource-list li,
+.reference-list li {
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.resource-list a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.resource-list a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
